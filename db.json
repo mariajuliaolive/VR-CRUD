@@ -1,0 +1,55 @@
+{
+  "objetos": [
+    {
+      "nome": "jana",
+      "cor": "blue",
+      "id": 1
+    },
+    {
+      "nome": "jane",
+      "cor": "yellow",
+      "id": 2
+    },
+    {
+      "nome": "Janair",
+      "cor": "red",
+      "id": 4
+    },
+    {
+      "nome": "jonas",
+      "cor": "#4d96ff",
+      "forma": "tetrahedron",
+      "id": 6
+    },
+    {
+      "nome": "papel",
+      "cor": "#6bcB77",
+      "forma": "tetrahedron",
+      "id": 7
+    },
+    {
+      "nome": "pinico",
+      "cor": "#c77dff",
+      "forma": "cylinder",
+      "id": 8
+    },
+    {
+      "nome": "garoa",
+      "cor": "#4d96ff",
+      "forma": "box",
+      "id": 9
+    },
+    {
+      "nome": "casa",
+      "cor": "#6bcB77",
+      "forma": "box",
+      "id": 10
+    },
+    {
+      "nome": "carro",
+      "cor": "#c77dff",
+      "forma": "box",
+      "id": 11
+    }
+  ]
+}
