@@ -1,109 +1,200 @@
-# 🏛️ VR CRUD - Museu Virtual
+# 🏛️ VR CRUD – Museu Virtual em Realidade Virtual
 
 ## 📌 Sobre o Projeto
 
-Este projeto consiste em um **CRUD (Create, Read, Update, Delete)** desenvolvido em **Realidade Virtual (VR)** para gerenciamento de objetos dentro de um museu virtual.
+Este projeto implementa um **CRUD (Create, Read, Update, Delete)** integrado a um ambiente de **Realidade Virtual (VR)** utilizando **A-Frame**.
 
-A aplicação permite criar, visualizar, editar e remover objetos que fazem parte da exposição do museu. Cada objeto possui informações como nome, cor e identificador, possibilitando a organização e manipulação dentro do ambiente virtual.
+Os registros são representados como **objetos 3D dentro de uma cena virtual**.
+Cada item criado aparece automaticamente no ambiente como uma forma geométrica com **cor e formato aleatórios**.
 
-O objetivo do projeto é demonstrar como conceitos de **CRUD e manipulação de dados** podem ser aplicados em ambientes de **Realidade Virtual**, tornando a interação mais visual e imersiva.
-
----
-
-## 🎯 Funcionalidades
-
-* ➕ **Criar objetos** no museu virtual
-* 👀 **Visualizar objetos** presentes na exposição
-* ✏️ **Editar informações** dos objetos
-* ❌ **Remover objetos** do museu
-* 🧊 Representação visual dos objetos em formas geométricas no ambiente VR
+A aplicação permite criar, visualizar e remover objetos diretamente no ambiente virtual.
 
 ---
 
-## 🧠 Conceitos Utilizados
+# 🎯 Objetivo
 
-* CRUD (Create, Read, Update, Delete)
-* Manipulação de dados em JSON
-* Realidade Virtual
-* Estrutura de dados para armazenamento de objetos
-* Interface interativa
+Criar um sistema CRUD funcional onde os dados manipulados pelo usuário sejam representados visualmente em uma **cena 3D interativa**.
+
+Cada operação realizada no sistema modifica dinamicamente os objetos exibidos no ambiente virtual.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+# 🧠 Funcionamento
 
-* **HTML**
-* **JavaScript**
-* **A-Frame (WebVR Framework)**
-* **JSON**
-* **Git**
-* **GitHub**
+Cada objeto criado possui:
+
+* **Nome**
+* **Cor aleatória**
+* **Forma geométrica aleatória**
+
+Os objetos são exibidos organizados dentro da cena 3D e possuem **animação de rotação contínua**.
+
+O usuário pode interagir com os objetos através do cursor da câmera.
 
 ---
 
-## 📂 Estrutura do Projeto
+# 🔄 Operações CRUD
 
+## Create (POST)
+
+Cria um novo objeto no sistema.
+
+* O usuário digita o nome do objeto
+* O sistema gera automaticamente:
+
+  * uma **cor aleatória**
+  * uma **forma geométrica aleatória**
+* O objeto aparece na cena virtual
+
+---
+
+## Read (GET)
+
+Lista todos os objetos existentes no sistema e os exibe no ambiente virtual.
+
+Cada objeto aparece com:
+
+* forma geométrica
+* cor
+* nome exibido acima do objeto
+
+---
+
+## Delete (DELETE)
+
+Para remover um objeto:
+
+* basta **clicar no objeto dentro da cena 3D**
+
+O objeto será removido:
+
+* da cena virtual
+* do armazenamento da API
+
+---
+
+# 🎮 Interação no Ambiente Virtual
+
+A interação ocorre através de:
+
+* **Cursor da câmera**
+* **Clique nos objetos**
+* **Interface HTML auxiliar**
+
+Menu disponível na interface:
+
+* Criar objeto
+* Atualizar lista
+
+---
+
+# 🛠️ Tecnologias Utilizadas
+
+### Linguagens
+
+* HTML
+* JavaScript
+
+### Bibliotecas
+
+* **A-Frame** – criação do ambiente de Realidade Virtual
+
+### Backend Simulado
+
+* **JSON Server** – utilizado para simular uma API REST
+
+---
+
+# 📦 Estrutura do Projeto
+
+```
 VR-CRUD
 │
 ├── index.html
 ├── app.js
 ├── db.json
 └── README.md
+```
 
 ---
 
-## 🚀 Como Executar o Projeto
+# 🚀 Como Executar o Projeto
 
-1. Clone este repositório:
+## 1️⃣ Clonar o repositório
 
-```bash
+```
 git clone https://github.com/mariajuliaolive/VR-CRUD.git
 ```
 
-2. Acesse a pasta do projeto:
+---
 
-```bash
-cd VR-CRUD
+## 2️⃣ Instalar o JSON Server
+
+Caso não tenha instalado:
+
+```
+npm install -g json-server
 ```
 
-3. Abra o arquivo **index.html** em um navegador.
+---
+
+## 3️⃣ Iniciar a API
+
+Dentro da pasta do projeto execute:
+
+```
+json-server --watch db.json
+```
+
+A API será iniciada em:
+
+```
+http://localhost:3000
+```
 
 ---
 
-## 🎮 Como Utilizar
+## 4️⃣ Executar o projeto
 
-Dentro do ambiente virtual será possível:
-
-* Adicionar novos objetos ao museu
-* Visualizar os objetos existentes
-* Alterar propriedades dos objetos
-* Remover objetos da exposição
-
-Cada objeto criado pode possuir **formas diferentes**, como quadrados ou triângulos, representando itens do museu.
+Abra o arquivo **index.html** no navegador.
 
 ---
 
-## 📚 Objetivo Acadêmico
+# 🌐 Cena Virtual
 
-Este projeto foi desenvolvido com fins educacionais para demonstrar:
+O ambiente virtual possui:
 
-* Implementação de operações CRUD
-* Aplicação de realidade virtual na web
-* Organização e manipulação de dados
+* céu virtual
+* plano representando o chão
+* iluminação ambiente
+* câmera com cursor interativo
+
+Os objetos são posicionados automaticamente na cena para manter a organização visual.
 
 ---
 
-## 👩‍💻 Autora
+# 📚 Conceitos Aplicados
+
+* CRUD
+* API REST
+* Fetch API
+* Manipulação de JSON
+* Renderização 3D na Web
+* Interação em Realidade Virtual
+
+---
+
+# 👩‍💻 Autora
 
 **Maria Julia Oliveira**
 
-Estudante de Ciência da Computação.
 
-GitHub:
+
+GitHub
 https://github.com/mariajuliaolive
 
 ---
 
-## 📄 Licença
+# 📄 Licença
 
-Este projeto é de uso acadêmico e educacional.
+Projeto desenvolvido para fins acadêmicos.
